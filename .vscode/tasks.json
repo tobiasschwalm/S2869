@@ -1,0 +1,58 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Kompilieren",
+      "detail": "Aktuelle Aufgabe kompilieren (make compile)",
+      "type": "shell",
+      "command": "d='${fileDirname}'; [ -f \"$d/Makefile\" ] || d=\"$d/..\"; cd \"$d\" && make compile",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": "$javac",
+      "presentation": {
+        "reveal": "always",
+        "clear": true,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Tests ausführen",
+      "detail": "Unit-Tests der aktuellen Aufgabe ausführen (make test)",
+      "type": "shell",
+      "command": "d='${fileDirname}'; [ -f \"$d/Makefile\" ] || d=\"$d/..\"; cd \"$d\" && make test",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "clear": true,
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "Ausführen",
+      "detail": "Hauptprogramm der aktuellen Aufgabe starten (make run)",
+      "type": "shell",
+      "command": "d='${fileDirname}'; [ -f \"$d/Makefile\" ] || d=\"$d/..\"; cd \"$d\" && make run",
+      "problemMatcher": "$javac",
+      "presentation": {
+        "reveal": "always",
+        "clear": true,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Aufräumen",
+      "detail": "Kompilierte Dateien löschen (make clean)",
+      "type": "shell",
+      "command": "d='${fileDirname}'; [ -f \"$d/Makefile\" ] || d=\"$d/..\"; cd \"$d\" && make clean",
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared"
+      }
+    }
+  ]
+}

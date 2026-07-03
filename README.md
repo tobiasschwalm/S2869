@@ -1,25 +1,56 @@
-# S2869_Environment
+# S2869 - Lernumgebung
 
-## DevContainer Setup
+Lernumgebung für den Kurs **Prinzipien und Architekturen in der Softwareentwicklung**.
 
-Dieses Projekt verwendet eine DevContainer-Konfiguration für eine einheitliche Entwicklungsumgebung mit:
-- Node.js
-- Java SDK
-- C++ Compiler (build-essential)
-- PlantUML
+---
 
-### Voraussetzungen für DevContainer
+## Schnellstart mit DevContainer (empfohlen)
 
-Um den DevContainer nutzen zu können, müssen folgende Tools auf deinem System installiert sein:
-- **Docker Desktop**: https://www.docker.com/products/docker-desktop
-- **Visual Studio Code**: https://code.visualstudio.com/
-- **VS Code Extension: Dev Containers**
-  - Installiere die Erweiterung "Dev Containers" (ID: ms-vscode-remote.remote-containers) aus dem VS Code Marketplace
+Voraussetzungen: [Docker Desktop](https://www.docker.com/products/docker-desktop) und [VS Code](https://code.visualstudio.com/) mit der Extension **Dev Containers** (`ms-vscode-remote.remote-containers`).
 
-> **Hinweis:** Auf macOS und Windows ist Docker Desktop erforderlich. Unter Linux reicht eine funktionierende Docker-Installation.
+1. Repository klonen
+2. Ordner in VS Code öffnen
+3. Wenn VS Code fragt: **„Reopen in Container"** wählen – oder über die Befehlspalette (`Ctrl+Shift+P`) → _Dev Containers: Reopen in Container_
+4. Warten bis der Container gebaut ist (einmalig ~2 min)
 
-**Start:**
-1. Öffne das Projekt in VS Code
-2. Wähle: "Reopen in Container"
-3. Nach dem Build stehen alle Tools zur Verfügung:
-   - `node -v`, `javac -version`, `g++ --version`, `plantuml -version`
+Danach stehen Java 21, Node.js und PlantUML direkt im integrierten Terminal zur Verfügung.
+
+---
+
+## Aufbau
+
+Jede Aufgabe enthält:
+
+- **Quelldateien** mit `// TODO`-Markierungen (eigene Implementierung)
+- **`*Test.java`** – Unit-Test, der nach der Implementierung grün sein soll
+- **`Makefile`** mit den Targets `compile`, `test`, `run`, `clean`
+
+---
+
+## Workflow
+
+### 1. Datei öffnen
+
+Eine der `*.java`-Dateien mit TODOs aus dem Ordner `src` öffnen.
+
+### 2. Implementieren
+
+Die mit `// TODO` markierten Stellen ausfüllen.
+
+### 3. Testen
+
+**Option A – VS Code Task (empfohlen)**
+
+- `Ctrl+Shift+B` → **Kompilieren** (Build-Default-Task)
+- `Ctrl+Shift+P` → _Tasks: Run Test Task_ → **Tests ausführen**
+
+Kompilierungsfehler erscheinen direkt im **Problems**-Panel.
+
+**Option B – Terminal**
+
+```bash
+cd src/14_strategy
+make test      # kompiliert und führt Tests aus
+make run       # startet das Hauptprogramm
+make clean     # löscht kompilierte Dateien
+```

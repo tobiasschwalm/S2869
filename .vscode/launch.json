@@ -1,0 +1,36 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "factory_method.Main",
+      "projectName": "09_factory_method"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "singleton.Main",
+      "projectName": "08_singleton"
+    },
+    {
+      "type": "java",
+      "name": "Tests ausführen",
+      "request": "launch",
+      "mainClass": "org.junit.platform.console.ConsoleLauncher",
+      "classPaths": [
+        "${workspaceFolder}/lib/junit.jar",
+        "${fileDirname}/../out"
+      ],
+      "args": [
+        "execute",
+        "--scan-classpath=${fileDirname}/../out",
+        "--disable-banner",
+        "--details=tree"
+      ],
+      "preLaunchTask": "Kompilieren"
+    }
+  ]
+}

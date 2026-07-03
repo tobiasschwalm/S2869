@@ -1,15 +1,19 @@
 {
-  "name": "Fullstack Dev Env",
+  "name": "S2869 – Prinzipien und Architekturen in der Softwareentwicklung",
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash"
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "jebbs.plantuml",
+        "esbenp.prettier-vscode"
+      ]
+    }
   },
-  "extensions": [
-    "ms-vscode.cpptools",
-    "vscjava.vscode-java-pack",
-    "esbenp.prettier-vscode",
-    "jebbs.plantuml"
-  ]
+  "postCreateCommand": "echo 'Entwicklungsumgebung bereit. Öffne src/<aufgabe>/ und starte mit: make test'"
 }
