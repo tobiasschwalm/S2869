@@ -5,6 +5,83 @@
       "type": "java",
       "name": "Main",
       "request": "launch",
+      "mainClass": "visitor.Main",
+      "projectName": "29_visitor"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "memento.Main",
+      "projectName": "28_memento"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "composite.Main",
+      "projectName": "26_composite"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "bridge.Main",
+      "projectName": "25_bridge"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "abstract_factory.Main",
+      "projectName": "24_abstract_factory"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "template_method.Main",
+      "projectName": "16_template_method"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "command.Main",
+      "projectName": "15_command"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "strategy.Main",
+      "projectName": "14_strategy"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "facade.Main",
+      "projectName": "12_facade"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "adapter.Main",
+      "projectName": "11_adapter"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "builder.Main",
+      "projectName": "10_builder"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
       "mainClass": "factory_method.Main",
       "projectName": "09_factory_method"
     },
